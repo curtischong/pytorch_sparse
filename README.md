@@ -1,3 +1,9 @@
+Why have this fork?
+Pytorch scatter doesn't encourage people from pip installing it from source (via pip install pytorch-scatter) since they don't want the system to pick up the wrong version of torch (that isn't for your version of cuda) - see rusty1s#266
+
+I checked their wheels and they do NOT have one that is compatible with M1 macs. So I cloned their repo, and added pyproject.toml so you CAN build the wheel for your computer using pip install git+https://github.com/curtischong/pytorch_sparse.git
+
+
 [pypi-image]: https://badge.fury.io/py/torch-sparse.svg
 [pypi-url]: https://pypi.python.org/pypi/torch-sparse
 [testing-image]: https://github.com/rusty1s/pytorch_sparse/actions/workflows/testing.yml/badge.svg
